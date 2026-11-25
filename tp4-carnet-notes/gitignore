@@ -1,0 +1,5 @@
+build/
+tp4
+tp4.exe
+*.o
+.vscode/
