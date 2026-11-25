@@ -14,3 +14,10 @@ compile_commands.json
 # Caches des outils
 .cache/
 .idea/
+build/
+*.a
+*.so
+*.o
+*.gcm
+gcm.cache/
+bulletin_*

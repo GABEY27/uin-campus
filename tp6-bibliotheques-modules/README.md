@@ -21,3 +21,8 @@
 - Modifier `regles_impl.cpp` (.cpp) : 1 seul fichier recompile + link.
 - Modifier `regles.cppm` (interface) : cascade, tous les importateurs recompilent (regles + impl + main).
 - Meme principe que regles.hpp dans UIN-Campus : modifier un en-tete recompile tous ses includers.
+
+## Correctif Partie C - PCH et modules
+- PCH teste sur le module : ECHEC. `target_precompile_headers` injecte `-include cmake_pch.hxx` avant `module;`, GCC : `module-declaration only permitted as first declaration`.
+- Conclusion : PCH = pour bibliotheque classique a en-tetes (Partie A / UIN-Campus), PAS pour un module C++20.
+- Apres retrait du PCH, rebuild : `Bien`.
